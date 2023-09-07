@@ -4,7 +4,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Constant {
-    public static final Path CONFIG_JSON_PATH = Paths.get("../", "src", "main", "resources", "rg", "rg_config.json");
+    public static final Path CONFIG_JSON_PATH = Paths.get("src", "main", "resources", "rg", "rg_config.json");
 
 
     public static class LoginPageConstants {
