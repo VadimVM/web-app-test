@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="mobile-smoke-common-aos-az" verbose="1">
+<!--    <listeners>-->
+<!--        <listener class-name="com.fintech.farm.listener.SomeListener"/>-->
+<!--    </listeners>-->
+    <test name="LoginTest">
+        <classes>
+            <class name="com.web.app.tests.LoginTest"/>
+        </classes>
+    </test>
+    <test name="ProfileTest">
+        <classes>
+            <class name="com.web.app.tests.ProfileTest"/>
+        </classes>
+    </test>
+</suite>
