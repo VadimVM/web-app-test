@@ -1,20 +1,17 @@
-import com.web.app.tests.action.LoginAction;
-import com.web.app.tests.webdriver.CreateWebDriver;
-import org.testng.annotations.BeforeMethod;
+package com.web.app.tests;
+
+import com.web.app.tests.base.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Owner;
 import org.testng.annotations.Test;
 
 import static com.web.app.tests.config.ConfigUtil.getRGConfig;
 
-public class LoginTest {
-    LoginAction loginAction;
-
-    @BeforeMethod
-    public void init(){
-        loginAction = new LoginAction();
-        CreateWebDriver.createWebDriver();
-    }
+public class LoginTest extends BaseTest {
 
     @Test
+    @Owner("Vadym Mykhailenko")
+    @Description("Check login to researchGate")
     public void loginRG() {
         loginAction
                 .checkFirstPage()
