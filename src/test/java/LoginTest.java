@@ -3,6 +3,8 @@ import com.web.app.tests.webdriver.CreateWebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import static com.web.app.tests.config.ConfigUtil.getRGConfig;
+
 public class LoginTest {
     LoginAction loginAction;
 
@@ -17,7 +19,7 @@ public class LoginTest {
         loginAction
                 .checkFirstPage()
                 .clickLoginButton()
-                .fillFramesAndTapLogin("vadimvm11@gmail.com", System.getenv("user_pass"))
+                .fillFramesAndTapLogin(getRGConfig().getUserEmail(), System.getProperty("user_pass"))
                 .checkMainElement();
     }
 }
